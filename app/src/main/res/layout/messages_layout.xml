@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@android:color/transparent">
+
+    <LinearLayout
+        android:id="@+id/msgHolderLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingRight="8dp"
+        android:paddingTop="5dp"
+        android:paddingLeft="10dp"
+        android:paddingBottom="8dp"
+        android:paddingEnd="8dp"
+        android:layout_marginTop="5dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="2dp">
+
+            <!-- Name Layout -->
+
+            <LinearLayout
+                android:id="@+id/nameLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/profileCIV"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    tools:src="@drawable/person_avatar"
+                    app:civ_border_width="1dp"/>
+
+                <TextView
+                    android:id="@+id/nameTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    tools:text="Abhiram Labani"
+                    android:textColor="@color/purpleColor"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Inverse"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"/>
+
+            </LinearLayout>
+
+            <!-- Message Layout -->
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:weightSum="1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="0.68">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginStart="16dp">
+
+                        <RelativeLayout
+                            android:id="@+id/msgContainerLayout"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="8dp"
+                            >
+
+                            <TextView
+                                android:id="@+id/home_msgTV"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                tools:text="Hi... How are you doing today?"
+                                android:textColor="@color/dark_grey"
+                                android:textSize="16sp"
+                                android:textColorLink="@color/auth_page_color"
+                                android:autoLink="all"
+                                android:maxLength="150"
+                                android:maxWidth="300dp"
+                                android:minWidth="100dp"/>
+
+                            <TextView
+                                android:id="@+id/msgTimeTV"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                tools:text="11:20pm"
+                                android:textSize="12sp"
+                                android:layout_alignEnd="@+id/home_msgTV"
+                                android:layout_below="@+id/home_msgTV"
+                                android:layout_alignRight="@+id/home_msgTV" />
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/home_msgReplyIV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
+                    android:src="@drawable/reply"
+                    android:layout_weight="0.32"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

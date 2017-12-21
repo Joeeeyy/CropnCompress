@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    tools:showIn="@layout/activity_home">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/yellowColour" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/rectangle_round_corner">
+
+        <TextView
+            android:id="@+id/locationTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_centerInParent="true"
+            android:text="Hello"
+            android:textSize="30sp"
+            android:textColor="@android:color/black"
+            android:visibility="gone"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/home_messagesRV"
+            android:layout_marginLeft="2dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="2dp"
+            android:layout_marginBottom="5dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="15dp"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:weightSum="1">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/home_inputMsgTET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/editbox_circle"
+                android:hint="@string/home_input_hint"
+                android:textSize="15sp"
+                android:layout_gravity="center_vertical"
+                android:paddingLeft="8dp"
+                android:gravity="center_vertical"
+                android:layout_weight="0.8"
+                android:layout_marginRight="5dp"/>
+
+            <ImageView
+                android:id="@+id/send_msg_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/send_round"
+                android:layout_weight="0.2"
+                android:padding="4dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="-5dp"
+                android:visibility="visible"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>
